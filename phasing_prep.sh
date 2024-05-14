@@ -17,6 +17,7 @@ module load SHAPEIT/v2.r837
 cd /mosaic_directory/1.unphased
 echo "Working on prep 1 for chromosome $chr"
 
+# Running shapeit to find out which variants need to be removed first
 shapeit -check --thread 8 \
     -R ${KGP_Phase3}/1000GP_Phase3_chr${chr}.hap.gz ${KGP_Phase3}/1000GP_Phase3_chr${chr}.legend.gz ${KGP_Phase3}/1000GP_Phase3.sample \
     -B bed_file_coloured_chr${chr} \
